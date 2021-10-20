@@ -17,15 +17,35 @@ Must Have
 Nice to Have
 Сборка и запуск Docker контейнера с этим сервисом
 
+---
+
 ### Endpoints:
 
 * /api/*
     
   по умолчанию возвращает гифку для USD
 
----
 * /api/gif/{base} 
 
   возвращает гифку для валюты, переданной параметром base
 
-### Сборка
+---
+
+### Запуск
+```
+java -jar currencyChecker-1.0.0.jar
+```
+---
+
+### Сборка и запуск Docker контейнера с этим сервисом
+
+Сборка:
+```
+docker build -t currency_checker_image .
+```
+
+Запуск:
+```
+docker run -p 9090:9090 currency_checker_image
+```
+
